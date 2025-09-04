@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        p {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to My Web App</h2>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <br>
+        <button onclick="showGreeting()">Submit</button>
+        <p id="greeting"></p>
+    </div>
+
+    <script>
+        function showGreeting() {
+            let name = document.getElementById('nameInput').value;
+            let message = name ? `Hello, ${name}! 👋` : `Please enter your name.`;
+            document.getElementById('greeting').innerText = message;
+        }
+    </script>
+</body>
+</html>
